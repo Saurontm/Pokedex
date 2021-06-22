@@ -5,6 +5,9 @@ import { GlobalStyle } from "../src/styles";
 import "./App.css";
 import pokemon from "./data";
 import PokemonList from "./components/PokemonList";
+import { Route } from "react-router";
+import { Switch } from "react-router";
+import PokemonDetails from "./components/PokemonDetails";
 
 const theme = {
   mainColor: "#FAF6F6",
@@ -22,7 +25,14 @@ function App() {
           src={headerImage}
           alt="Pokedex"
         ></WebsiteImage>
-        <PokemonList pokemon={pokemon}></PokemonList>
+        <Switch>
+          <Route exact path="/">
+            <PokemonList pokemon={pokemon}></PokemonList>
+          </Route>
+          <Route path="/:productSlug">
+            <PokemonDetails pokemon={pokemon}></PokemonDetails>
+          </Route>
+        </Switch>
       </ThemeProvider>
     </div>
   );
