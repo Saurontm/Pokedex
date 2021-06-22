@@ -71,7 +71,7 @@ export const DetailWrapper = styled.div`
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto; 
-  margin-bottom: 160px;
+  margin-bottom: 200px;
   padding: 20px;
   width: 700px;
 
@@ -123,4 +123,15 @@ export const BackButton = styled.button`
     background-color: ${(props) => props.theme.secondaryColor};
     color: ${(props) => props.theme.backgroundColor};
   }
+`;
+
+export const SearchBarStyled = styled.input`
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 40%;
+  border: 1px solid #b0b0b0;
+  border-radius: 4px;
+  background-color: ${(props) => props.theme.backgroundColor};
+  color: ${(props) => props.theme.secondaryColor};
 `;
