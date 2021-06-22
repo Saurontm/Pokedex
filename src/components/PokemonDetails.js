@@ -1,6 +1,8 @@
 import { DetailWrapper, BackButton } from "../styles";
 import { useParams, Redirect } from "react-router";
 import { useHistory } from "react-router-dom";
+import { EvolutionsTitle, EvolutionsWrapper } from "../styles";
+import Pokemon from "./Pokemon";
 
 const PokemonDetails = (props) => {
   const history = useHistory();
@@ -12,10 +14,6 @@ const PokemonDetails = (props) => {
   if (!pokemon) return <Redirect to="/" />;
   return (
     <div>
-      {/* <Helmet>
-        <title>{sneaker.name}</title>
-        <meta name="description" content="Helmet application" />
-      </Helmet> */}
       <DetailWrapper>
         <BackButton onClick={() => history.goBack()}>back</BackButton>
         <img src={pokemon.imageURL} alt={pokemon.name} />
@@ -24,8 +22,33 @@ const PokemonDetails = (props) => {
         <p className="pokemonType">{pokemon.type.join(" - ")}</p>
         <p className="pokemonEntry">{pokemon.entry}</p>
       </DetailWrapper>
+      {pokemon.hasOwnProperty("pre") || pokemon.hasOwnProperty("next") ? (
+        <EvolutionsTitle>Evolutions</EvolutionsTitle>
+      ) : (
+        ""
+      )}
+      <EvolutionsWrapper>
+        {pokemon.hasOwnProperty("pre") ? (
+          <Pokemon
+            pokemon={props.pokemon.find((pre) => pre.id === pokemon.pre)}
+          />
+        ) : (
+          ""
+        )}
+        {pokemon.hasOwnProperty("next") ? (
+          <Pokemon
+            pokemon={props.pokemon.find((next) => next.id === pokemon.next)}
+          />
+        ) : (
+          ""
+        )}
+      </EvolutionsWrapper>
     </div>
   );
 };
+
+// if (props.upgrade.hasOwnProperty("opens")) {
+//     gameRules.find((rule) => rule.id === props.upgrade.opens).status = true;
+//   }
 
 export default PokemonDetails;

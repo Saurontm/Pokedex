@@ -6,6 +6,7 @@ const pokemon = [
     entry:
       "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.",
     imageURL: "https://cdn2.bulbagarden.net/upload/2/21/001Bulbasaur.png",
+    next: 2,
   },
   {
     id: 2,
@@ -14,6 +15,8 @@ const pokemon = [
     entry:
       "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.",
     imageURL: "https://cdn2.bulbagarden.net/upload/7/73/002Ivysaur.png",
+    next: 3,
+    pre: 1,
   },
   {
     id: 3,
@@ -22,6 +25,7 @@ const pokemon = [
     entry:
       "Its plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.",
     imageURL: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png",
+    pre: 2,
   },
   {
     id: 4,
@@ -30,6 +34,7 @@ const pokemon = [
     entry:
       "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
     imageURL: "https://cdn2.bulbagarden.net/upload/7/73/004Charmander.png",
+    next: 5,
   },
   {
     id: 5,
@@ -39,6 +44,8 @@ const pokemon = [
       "It has a barbaric nature. In battle, it whips its fiery tail around and slashes away with sharp claws.",
     imageURL:
       "https://i.pinimg.com/originals/9e/fe/f7/9efef7d233a80b4ba49bc90baadcb912.png",
+    next: 6,
+    pre: 4,
   },
   {
     id: 6,
@@ -47,6 +54,7 @@ const pokemon = [
     entry:
       "It spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames.",
     imageURL: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
+    pre: 5,
   },
   {
     id: 7,
@@ -55,6 +63,7 @@ const pokemon = [
     entry:
       "When it retracts its long neck into its shell, it squirts out water with vigorous force.",
     imageURL: "https://cdn2.bulbagarden.net/upload/3/39/007Squirtle.png",
+    next: 8,
   },
   {
     id: 8,
@@ -64,7 +73,10 @@ const pokemon = [
       "It is recognized as a symbol of longevity. If its shell has algae on it, that Wartortle is very old.",
     imageURL:
       "https://cdn2.bulbagarden.net/upload/thumb/0/0c/008Wartortle.png/500px-008Wartortle.png",
+    pre: 7,
+    next: 9,
   },
+
   {
     id: 9,
     name: "Blastoise",
@@ -73,6 +85,7 @@ const pokemon = [
       "It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.",
     imageURL:
       "https://cdn2.bulbagarden.net/upload/thumb/0/02/009Blastoise.png/500px-009Blastoise.png",
+    pre: 8,
   },
   {
     id: 10,
@@ -81,6 +94,7 @@ const pokemon = [
     entry:
       "For protection, it releases a horrible stench from the antenna on its head to drive away enemies.",
     imageURL: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png",
+    next: 11,
   },
   {
     id: 11,
@@ -89,6 +103,8 @@ const pokemon = [
     entry:
       "It is waiting for the moment to evolve. At this stage, it can only harden, so it remains motionless to avoid attack.",
     imageURL: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png",
+    pre: 10,
+    next: 12,
   },
   {
     id: 12,
@@ -98,6 +114,7 @@ const pokemon = [
       "In battle, it flaps its wings at great speed to release highly toxic dust into the air.",
     imageURL:
       "https://cdn2.bulbagarden.net/upload/thumb/d/d1/012Butterfree.png/1200px-012Butterfree.png",
+    pre: 11,
   },
   {
     id: 13,
@@ -106,6 +123,7 @@ const pokemon = [
     entry:
       "Beware of the sharp stinger on its head. It hides in grass and bushes where it eats leaves.",
     imageURL: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/013.png",
+    next: 14,
   },
   {
     id: 14,
@@ -114,6 +132,8 @@ const pokemon = [
     entry:
       "Able to move only slightly. When endangered, it may stick out its stinger and poison its enemy.",
     imageURL: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/014.png",
+    pre: 13,
+    next: 15,
   },
   {
     id: 15,
@@ -123,6 +143,7 @@ const pokemon = [
       "It has three poisonous stingers on its forelegs and its tail. They are used to jab its enemy repeatedly.",
     imageURL:
       "https://cdn2.bulbagarden.net/upload/thumb/6/61/015Beedrill.png/1200px-015Beedrill.png",
+    pre: 14,
   },
   {
     id: 16,
@@ -131,6 +152,7 @@ const pokemon = [
     entry:
       "Very docile. If attacked, it will often kick up sand to protect itself rather than fight back.",
     imageURL: "https://cdn2.bulbagarden.net/upload/5/55/016Pidgey.png",
+    next: 17,
   },
   {
     id: 17,
@@ -139,6 +161,8 @@ const pokemon = [
     entry:
       "This Pokémon is full of vitality. It constantly flies around its large territory in search of prey.",
     imageURL: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/017.png",
+    pre: 16,
+    next: 18,
   },
   {
     id: 18,
@@ -148,6 +172,7 @@ const pokemon = [
       "This Pokémon flies at Mach 2 speed, seeking prey. Its large talons are feared as wicked weapons.",
     imageURL:
       "https://cdn2.bulbagarden.net/upload/thumb/5/57/018Pidgeot.png/1200px-018Pidgeot.png",
+    pre: 17,
   },
 ];
 

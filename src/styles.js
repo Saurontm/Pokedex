@@ -51,12 +51,27 @@ export const ListWrapper = styled.div`
   justify-content: center;
 `;
 
+export const EvolutionsWrapper = styled.div`
+  display: flex; /* allows us to use Flexbox */
+  ${"" /* flex-wrap: wrap; */}
+  align-items: center;
+  justify-content: center;
+`;
+
+export const EvolutionsTitle = styled.h1`
+  color: ${(props) => props.theme.mainColor};
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: -20px;
+`;
+
 export const DetailWrapper = styled.div`
   display: "flex"
   align-content: left;
   margin-top: 30px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; 
+  margin-bottom: 160px;
   padding: 20px;
   width: 700px;
 
