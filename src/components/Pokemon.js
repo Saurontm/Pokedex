@@ -6,10 +6,10 @@ const Pokemon = (props) => {
     <PokemonWrapper>
       <p className="pokemonID">{props.pokemon.id}</p>
       <Link to={`/${props.pokemon.name.toLowerCase()}`}>
-        <img alt={props.pokemon.name} src={props.pokemon.imageURL} />
+        <img alt={props.pokemon.name} src={props.pokemon.imageURL} className='pokemonImg'/>
       </Link>
       <p className="pokemonName">{props.pokemon.name}</p>
-      <p className="pokemonType">{props.pokemon.type.join(" - ")}</p>
+      {props.pokemon.typeTags.map((type) => type)}
     </PokemonWrapper>
   );
 };

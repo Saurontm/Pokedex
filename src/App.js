@@ -8,6 +8,7 @@ import PokemonList from "./components/PokemonList";
 import { Route } from "react-router";
 import { Switch } from "react-router";
 import PokemonDetails from "./components/PokemonDetails";
+import { Link } from "react-router-dom";
 
 const theme = {
   mainColor: "#FAF6F6",
@@ -20,11 +21,13 @@ function App() {
     <div>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <WebsiteImage
-          id="header-image"
-          src={headerImage}
-          alt="Pokedex"
-        ></WebsiteImage>
+        <Link to={`/`}>
+          <WebsiteImage
+            id="header-image"
+            src={headerImage}
+            alt="Pokedex"
+          ></WebsiteImage>
+        </Link>
         <Switch>
           <Route exact path="/">
             <PokemonList pokemon={pokemon}></PokemonList>

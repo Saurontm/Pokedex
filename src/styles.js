@@ -16,10 +16,14 @@ export const PokemonWrapper = styled.div`
   margin: 70px;
   ${"" /* text-align: center; */}
   img {
+    &.pokemonImg{
     width: auto;
     height: 180px;
     display: block;
     margin: 0 auto;
+    }
+    margin-right: 8px;
+  
   }
   p {
     text-align: left;
@@ -28,6 +32,7 @@ export const PokemonWrapper = styled.div`
     &.pokemonName {
       color: ${(props) => props.theme.mainColor};
       font-size: 200%;
+      margin-bottom: 8px
     }
 
     &.pokemonID {
@@ -76,9 +81,13 @@ export const DetailWrapper = styled.div`
   width: 700px;
 
   img {
-    width: 50%;
+    &.pokemonImg{
+      width: 50%;
     float: left;
     margin-right: 100px;
+    }
+    margin-right: 8px;
+    
   }
   p {
     text-align: left;
@@ -89,6 +98,7 @@ export const DetailWrapper = styled.div`
     &.pokemonName {
       color: ${(props) => props.theme.mainColor};
       font-size: 200%;
+      margin-bottom: 8px
     }
 
     &.pokemonID {

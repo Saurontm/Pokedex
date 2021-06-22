@@ -16,10 +16,10 @@ const PokemonDetails = (props) => {
     <div>
       <DetailWrapper>
         <BackButton onClick={() => history.goBack()}>back</BackButton>
-        <img src={pokemon.imageURL} alt={pokemon.name} />
+        <img src={pokemon.imageURL} alt={pokemon.name} className='pokemonImg'/>
         <p className="pokemonID">{pokemon.id}</p>
         <p className="pokemonName">{pokemon.name}</p>
-        <p className="pokemonType">{pokemon.type.join(" - ")}</p>
+        {pokemon.typeTags.map((type) => type)}
         <p className="pokemonEntry">{pokemon.entry}</p>
       </DetailWrapper>
       {pokemon.hasOwnProperty("pre") || pokemon.hasOwnProperty("next") ? (
