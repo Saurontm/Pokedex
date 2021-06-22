@@ -3,6 +3,8 @@ import headerImage from "./assets/pokedexHeader.png";
 import { WebsiteImage } from "./styles";
 import { GlobalStyle } from "../src/styles";
 import "./App.css";
+import pokemon from "./data";
+import PokemonList from "./components/PokemonList";
 
 const theme = {
   mainColor: "#FAF6F6",
@@ -20,6 +22,7 @@ function App() {
           src={headerImage}
           alt="Pokedex"
         ></WebsiteImage>
+        <PokemonList pokemon={pokemon}></PokemonList>
       </ThemeProvider>
     </div>
   );

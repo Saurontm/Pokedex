@@ -47,7 +47,7 @@ const pokemon = [
     name: "Wartortle",
     type: ["Water"],
     imageURL:
-      "https://static.wikia.nocookie.net/legendsofthemultiuniverse/images/2/2d/8-Wartortle.png/revision/latest?cb=20190204023340",
+      "https://cdn2.bulbagarden.net/upload/thumb/0/0c/008Wartortle.png/500px-008Wartortle.png",
   },
   {
     id: 9,
@@ -114,3 +114,5 @@ const pokemon = [
       "https://cdn2.bulbagarden.net/upload/thumb/5/57/018Pidgeot.png/1200px-018Pidgeot.png",
   },
 ];
+
+export default pokemon;
